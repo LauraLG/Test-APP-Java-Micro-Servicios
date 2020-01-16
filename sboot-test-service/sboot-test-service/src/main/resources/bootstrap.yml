@@ -1,0 +1,25 @@
+#
+# Copyright (c) Giesecke+Devrient Mobile Security GmbH [2017]-[2017]
+#
+spring:
+  profiles: dev
+  cloud:
+    config:
+      failFast: false
+---
+spring:
+  application:
+    name: "@project.artifactId@"
+  cloud:
+      config:
+        failFast: false
+
+info:
+  name: "@project.name@"
+  version: "@project.version@"
+  description: "@project.description@"
+
+
+logging:
+  pattern:
+    console: '%date{yyyy-MM-dd HH:mm:ss.SSS,GMT}Z %-5level [%15.-15thread] %-40.40logger{40} {%mdc} : %m%n'
